@@ -6,7 +6,7 @@ const routes = require('./routes/mabifusRoutes');
 const PORT = process.env.PORT || 5000;
 // const dbURI = 'mongodb://127.0.0.1:27017/mabifus';
 const dbURI =
-	'mongodb+srv://geekyCoder:toyibe25112001@geeky-coder-database.ugpwha3.mongodb.net/mabifus?retryWrites=true&w=majority';
+	'mongodb+srv://GeekyCoder:toyibe25112001@geekycodercluster.rav6m5u.mongodb.net/mabifus?retryWrites=true&w=majority';
 const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
