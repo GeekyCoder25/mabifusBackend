@@ -3,12 +3,11 @@ const cors = require('cors');
 const dotEnv = require('dotenv').config();
 const mongoose = require('mongoose');
 const routes = require('./routes/mabifusRoutes');
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3000;
 // const dbURI = 'mongodb://127.0.0.1:27017/mabifus';
-const dbURI =
-	'mongodb+srv://GeekyCoder:toyibe25112001@geekycodercluster.rav6m5u.mongodb.net/mabifus?retryWrites=true&w=majority';
+const dbURI = process.env.MONGO_URI;
 const app = express();
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 app.use(cors());
 mongoose
